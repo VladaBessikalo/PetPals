@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals - Adopt your friend!</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/js/index.js" defer></script>
+</head>
+<body>
+    <header class="header" id="home">
+        <nav class="nav">
+            <a href="#" class="nav__logo">
+                <img class="nav__logo-img" src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/logo-icon.png?raw=true" alt="logo">
+                <span class="nav__logo-name">PetPals</span>
+            </a>
+            <div class="nav__hamburger">
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__menu-item">
+                    <a href="#pets" class="nav__menu-link">Pets</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#adopt" class="nav__menu-link">Adopt</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#foster" class="nav__menu-link">Foster</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#volunteer" class="nav__menu-link">Volunteer</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#aboutus" class="nav__menu-link">About Us</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#stories" class="nav__menu-link">Happy Stories</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#contacts" class="nav__menu-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner__content">
+                <h1 class="banner__heading">
+                    Find a fluffy friend for yourself today!                
+                </h1>
+                <div class="banner__link">
+                    <a href="#pets" class="banner__link-btn"> 
+                        Our pets
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="section section--pets" id="pets">
+                <h2 class="section__heading">OUR PETS</h2>
+                <div class="slider__wrapper">
+                    <div class="slider-container">
+                        <button class="slider-container__btn slider-container__btn--prev">❮</button>
+                        <ul class="carousel">
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/1.jpg?raw=true" alt="cat" class="carousel__img">
+                                <h4 class="carousel__name">Ella</h4>
+                                <p class="carousel__info">Female</p>
+                                <p class="carousel__info">2 years</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/2.jpg?raw=true" alt="cat" class="carousel__img">
+                                <h4 class="carousel__name">Alf</h4>
+                                <p class="carousel__info">Male</p>
+                                <p class="carousel__info">1 year</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/3.jpg?raw=true" alt="cat" class="carousel__img">
+                                <h4 class="carousel__name">Mira</h4>
+                                <p class="carousel__info">Female</p>
+                                <p class="carousel__info">3 years</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/4.jpg?raw=true" alt="cat" class="carousel__img">
+                                <h4 class="carousel__name">Jack</h4>
+                                <p class="carousel__info">Male</p>
+                                <p class="carousel__info">7 months</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/5.jpg?raw=true" alt="cat" class="carousel__img">
+                                <h4 class="carousel__name">Blacksea</h4>
+                                <p class="carousel__info">Female</p>
+                                <p class="carousel__info">1 year</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/6.jpg?raw=true" alt="dog" class="carousel__img">
+                                <h4 class="carousel__name">Patron</h4>
+                                <p class="carousel__info">Male</p>
+                                <p class="carousel__info">4 years</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/7.jpg?raw=true" alt="dog" class="carousel__img">
+                                <h4 class="carousel__name">Kasia</h4>
+                                <p class="carousel__info">Female</p>
+                                <p class="carousel__info">6 years</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                            <li class="carousel__item">
+                                <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/pets/8.jpg?raw=true" alt="dog" class="carousel__img">
+                                <h4 class="carousel__name">Patrick</h4>
+                                <p class="carousel__info">Male</p>
+                                <p class="carousel__info">4 years</p>
+                                <button class="button button--adopt">Adopt me</button>
+                            </li>
+                        </ul>
+                        <button class="slider-container__btn slider-container__btn--next">❯</button>
+                    </div>
+                </div>
+            </section>
+            <div class="backdrop"></div>
+            <div class="modal modal--adopt" id="adopt-modal">
+                <div class="modal__heading">
+                    <button class="button button--close">&times;</button>    
+                </div>
+                <div class="modal__body">
+                    <h4 class="modal__title">Adoptors data</h4>
+                    <form class="form" id="adopt-form">
+                        <div class="form__content">
+                            <div class="form__group">
+                                <label class="form__label" for="name">Name:</label>
+                                <input class="form__input" type="text" id="name" name="name" minlength="2">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="email">Email:</label>
+                                <input class="form__input" type="email" id="email" name="email">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="age">Age:</label>
+                                <input class="form__input" type="number" id="age" name="age" min="18">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="occupation">Occupation:</label>
+                                <input class="form__input" type="text" id="occupation" name="occupation" minlength="2">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="message">Additional Information:</label>
+                                <textarea class="form__input" id="message" name="message" rows="4"></textarea>
+                            </div>    
+                        </div>
+                        <div class="form__buttons">
+                            <button type="submit" class="button button--submit">Submit</button>
+                            <button type="button" class="button button--cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <section class="section section--adopt" id="adopt">
+                <div class="slider__wrapper">
+                    <h2 class="section__heading">
+                        The Adoption Process is Simple
+                    </h2>
+                    <div class="section__subheading">
+                        Complete the Adoption Application and be on your way to adopting the perfect pet for your household.
+                    </div>
+                    <div class="steps">
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/calendar-96.png?raw=true" alt="calendar">
+                                </div>
+                                <h4 class="steps__heading">Submit Your Application</h4>
+                                <div class="steps__description">Many of the animals we rescue have been neglected or abused. We want to make sure that their new homes are capable of giving them the love they need.</div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/clinic-96.png?raw=true" alt="vet clinic">
+                                </div>
+                                <h4 class="steps__heading">Animals Are Fully Vetted</h4>
+                                <div class="steps__description">
+                                    All our animals are spayed/neutered, socialized with people and other animals, vaccinated, dewormed, Heartworm/FeLV/FIV tested and microchipped. Your pet will be ready to go!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/chat-96.png?raw=true" alt="chat">
+                                </div>
+                                <h4 class="steps__heading">Pair Pets with Parents</h4>
+                                <div class="steps__description">
+                                    We'll review your application, ask any follow up questions, and find you a match. Our counselors find the right pet for your family. We match you according to space, time, family situation, size, temperament, and age.                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button--adopt">
+                        Start My Application
+                    </button>
+                </div>
+            </section>
+            <section class="section section--foster" id="foster">
+                <div class="slider__wrapper">
+                    <h2 class="section__heading">
+                        Simple Steps to Becoming a Foster Parent to a Cat or Dog
+                    </h2>
+                    <div class="section__subheading">
+                        Complete the Foster Care Application and be on your way to changing the life of a cat or dog.
+                    </div>
+                    <div class="steps">
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/heart-96.png?raw=true" alt="heart">
+                                </div>
+                                <h4 class="steps__heading">
+                                    Save a Life
+                                </h4>
+                                <div class="steps__description">
+                                    When you foster a pet, we have room to bring another pet to our no-kill shelter. You’re saving two lives!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/pet-food-96.png?raw=true" alt="pet food">
+                                </div>
+                                <h4 class="steps__heading">
+                                    Free Food & Medical
+                                </h4>
+                                <div class="steps__description">
+                                    We provide you with all the food and supplies you need. We take care of all their medical needs as well.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/puzzle-96.png?raw=true" alt="puzzle">
+                                </div>
+                                <h4 class="steps__heading">
+                                    Perfectly Paired Pets
+                                </h4>
+                                <div class="steps__description">
+                                    After you fill out your foster application, our foster home coordinator works with you to find the right pets for your home.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button--adopt">
+                        Start My Application
+                    </button>
+                </div>
+            </section>
+            <section class="section section--volunteer" id="volunteer">
+                <div class="slider__wrapper">
+                    <h2 class="section__heading">
+                        Become a Volunteer
+                    </h2>
+                    <div class="section__subheading">
+                        We couldn’t save the lives of these animals without you. We appreciate any time or donations you can offer us.
+                    </div>
+                    <div class="steps">
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/calendar-96.png?raw=true" alt="calendar">
+                                </div>
+                                <h4 class="steps__heading">
+                                    When?
+                                </h4>
+                                <div class="steps__description">
+                                    We need volunteers seven days a week from 11:00-7:00. Please sign up at the links above.                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/group-96.png?raw=true" alt="group of people">
+                                </div>
+                                <h4 class="steps__heading">
+                                    Who?
+                                </h4>
+                                <div class="steps__description">
+                                    Anyone can volunteer!
+                                    You just have to love animals and be ready to work.                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content">
+                            <div class="steps__item">
+                                <div class="steps__img">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/icons/question-96.png?raw=true" alt="question">
+                                </div>
+                                <h4 class="steps__heading">
+                                    Why?
+                                </h4>
+                                <div class="steps__description">
+                                    We rescue thousands of abused and neglected dogs and cats every year. They all need care, help, and your love.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button--adopt">
+                        Sign Up to Volunteer
+                    </button>
+                </div>            
+            </section>
+            <section class="section section--about" id="aboutus">
+                <h2 class="section__heading">About Us</h2>
+                <div class="about__content">
+                    <div class="about__description">
+                        <div class="about__info">
+                            <p>
+                                For the past 10 years, PetPals shelter in Hoofddorp has proudly found forever homes for over 1,000 animals.
+                                Our main goal is to find loving, permanent homes for cats and dogs in need. 
+                            </p>
+                             <p>
+                                Together, we can make a pets and people happier!
+                            </p>
+                        </div>
+                        <div class="about__img">
+                            <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/banner-bg%20(1).jpg?raw=true" alt="dog and cat">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section--stories" id="stories">
+                <h2 class="section__heading">
+                    Our Happy Stories
+                </h2>
+                <div class="section__subheading">You can be the next one who will give love and care to a pet!</div>
+                <div class="about__photos">
+                    <div class="slider__wrapper">
+                        <div class="slider-container">
+                            <button class="slider-container__btn slider-container__btn--prev">❮</button>
+                            <ul class="carousel">
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted1.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted2.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted3.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted4.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted5.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                                <li class="carousel__item">
+                                    <img src="https://github.com/VladaBessikalo/PetPals/blob/main/img/adopted-pets/adopted6.jpg?raw=true" alt="cat and adopter" class="carousel__img">
+                                </li>
+                            </ul>
+                            <button class="slider-container__btn slider-container__btn--next">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section--contacts" id="contacts">
+                <div class="slider__wrapper">
+                    <h2 class="section__heading"> Contact Us</h2>
+                    <div class="contacts">
+                            <div><span>Address:</span> Hoofdweg, Westzijde 565, 2131 MT Hoofddorp</div>
+                            <a href="tel:0888113430"><span>Phone:</span> 088 811 3430</a>
+                            <div><span>Days:</span> Monday - Saturday</div>
+                            <div><span>Hours:</span> 10:00 - 17:00</div>
+                            <div class="contacts__map" style="width: 100%">
+                                <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Hoofdweg,%20Westzijde%20565,%202131%20MT%20Hoofddorp+(PetPals)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                    <a href="https://www.gps.ie/">gps tracker sport</a>
+                                </iframe>
+                            </div>    
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__social social">
+                <a href="https://www.facebook.com/" class="social__link">
+                    <img src="https://raw.githubusercontent.com/VladaBessikalo/PetPals/8924986402d3966d9d30862cc05a0bbbafe5358d/img/icons/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" class="social__link">
+                    <img src="https://raw.githubusercontent.com/VladaBessikalo/PetPals/8924986402d3966d9d30862cc05a0bbbafe5358d/img/icons/instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.youtube.com/" class="social__link">
+                    <img src="https://raw.githubusercontent.com/VladaBessikalo/PetPals/8924986402d3966d9d30862cc05a0bbbafe5358d/img/icons/youtube.svg" alt="youtube">
+                </a>
+            </div>
+            <p class="footer__copyright">&copy; 2024 Vlada Bessikalo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
