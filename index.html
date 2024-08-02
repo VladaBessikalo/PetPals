@@ -125,43 +125,6 @@
                     </div>
                 </div>
             </section>
-            <div class="backdrop"></div>
-            <div class="modal modal--adopt" id="adopt-modal">
-                <div class="modal__heading">
-                    <button class="button button--close">&times;</button>    
-                </div>
-                <div class="modal__body">
-                    <h4 class="modal__title">Adoptors data</h4>
-                    <form class="form" id="adopt-form">
-                        <div class="form__content">
-                            <div class="form__group">
-                                <label class="form__label" for="name">Name:</label>
-                                <input class="form__input" type="text" id="name" name="name" minlength="2">
-                            </div>
-                            <div class="form__group">
-                                <label class="form__label" for="email">Email:</label>
-                                <input class="form__input" type="email" id="email" name="email">
-                            </div>
-                            <div class="form__group">
-                                <label class="form__label" for="age">Age:</label>
-                                <input class="form__input" type="number" id="age" name="age" min="18">
-                            </div>
-                            <div class="form__group">
-                                <label class="form__label" for="occupation">Occupation:</label>
-                                <input class="form__input" type="text" id="occupation" name="occupation" minlength="2">
-                            </div>
-                            <div class="form__group">
-                                <label class="form__label" for="message">Additional Information:</label>
-                                <textarea class="form__input" id="message" name="message" rows="4"></textarea>
-                            </div>    
-                        </div>
-                        <div class="form__buttons">
-                            <button type="submit" class="button button--submit">Submit</button>
-                            <button type="button" class="button button--cancel">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <section class="section section--adopt" id="adopt">
                 <div class="slider__wrapper">
                     <h2 class="section__heading">
@@ -257,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button button--adopt">
+                    <button class="button button--foster">
                         Start My Application
                     </button>
                 </div>
@@ -311,7 +274,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button button--adopt">
+                    <button class="button button--volunteer">
                         Sign Up to Volunteer
                     </button>
                 </div>            
@@ -386,6 +349,52 @@
                 </div>
             </section>
         </div>
+        <div class="backdrop"></div>
+        <div class="modal">
+            <div class="modal__heading">
+                <button class="button button--close">&times;</button>    
+            </div>
+            <div class="modal__body">
+                <h4 class="modal__title">Adoptors data</h4>
+                <form class="form">
+                    <div class="form__content">
+                        <div class="form__group">
+                            <label class="form__label" for="name">Name<span>*</span>:</label>
+                            <input class="form__input" type="text" id="name" name="name" minlength="2">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email">Email<span>*</span>:</label>
+                            <input class="form__input" type="email" id="email" name="email">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="age">Age<span>*</span>:</label>
+                            <input class="form__input" type="number" id="age" name="age" min="18">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="occupation">Occupation<span>*</span>:</label>
+                            <input class="form__input" type="text" id="occupation" name="occupation" minlength="2">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="message">Additional Information<span>*</span>:</label>
+                            <textarea class="form__input" id="message" name="message" rows="4"></textarea>
+                        </div>    
+                    </div>
+                    <div class="form__buttons">
+                        <button type="submit" class="button button--submit">Submit</button>
+                        <button type="button" class="button button--cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="success-message">
+            <div class="success-message__title">
+                Thank you! Form submitted successfully!
+            </div>
+            <p class="success-message__text">
+                You will receive further instructions by e-mail from our manager
+            </p>
+            <button class="button success-message__btn">OK</button>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__container">
@@ -403,5 +412,8 @@
             <p class="footer__copyright">&copy; 2024 Vlada Bessikalo. All rights reserved.</p>
         </div>
     </footer>
+    <button class="button button--scroll">
+        <img src="/img/icons/arrow-up-16.png" alt="arrow up">
+    </button>
 </body>
 </html>

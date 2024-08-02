@@ -1,3 +1,4 @@
+/* Navigation and burger */
 const hamburgerMenu = document.querySelector('.nav__hamburger');
 const menu = document.getElementById('nav-menu');
 const bannerLinkBtn = document.querySelector('.banner__link-btn');
@@ -41,8 +42,7 @@ bannerLinkBtn.addEventListener('click', (event) => {
 
 navigation();
 
-
-// Slider
+/* Slider */
 function initializeSlider(sliderContainer) {
     const slides = sliderContainer.querySelector('.carousel');
     const slideItems = sliderContainer.querySelectorAll('.carousel__item');
@@ -74,10 +74,10 @@ function initializeSlider(sliderContainer) {
 
     function updateSlider() {
         slideWidth = slideItems[0].clientWidth;
-        slides.style.transition = 'none'; // Temporarily disable transition for resizing
+        slides.style.transition = 'none'; 
         slides.style.transform = `translateX(-${(currentIndex + visibleSlides) * slideWidth}px)`;
-        slides.offsetHeight; // Trigger reflow to apply the transform without transition
-        slides.style.transition = ''; // Re-enable transition
+        slides.offsetHeight; 
+        slides.style.transition = ''; 
     }
 
     function nextSlide() {
@@ -94,17 +94,17 @@ function initializeSlider(sliderContainer) {
 
     function handleTransitionEnd() {
         if (currentIndex >= totalSlides) {
-            slides.style.transition = 'none'; // Temporarily disable transition
+            slides.style.transition = 'none'; 
             currentIndex = 0;
             slides.style.transform = `translateX(-${visibleSlides * slideWidth}px)`;
-            slides.offsetHeight; // Trigger reflow to apply the transform without transition
-            slides.style.transition = ''; // Re-enable transition
+            slides.offsetHeight; 
+            slides.style.transition = ''; 
         } else if (currentIndex < 0) {
-            slides.style.transition = 'none'; // Temporarily disable transition
+            slides.style.transition = 'none'; 
             currentIndex = totalSlides - 1;
             slides.style.transform = `translateX(-${(currentIndex + visibleSlides) * slideWidth}px)`;
-            slides.offsetHeight; // Trigger reflow to apply the transform without transition
-            slides.style.transition = ''; // Re-enable transition
+            slides.offsetHeight; 
+            slides.style.transition = '';
         }
     }
 
@@ -114,42 +114,59 @@ function initializeSlider(sliderContainer) {
     prevButton.addEventListener('click', prevSlide);
 }
 
-// Initialize all sliders
 document.querySelectorAll('.slider-container').forEach(initializeSlider);
 
 
-// MODAL WITH FORM
-const adoptMeBtns = document.querySelectorAll('.button--adopt');
-const adoptModal = document.getElementById('adopt-modal');
+/* Modal window */
+const modal = document.querySelector('.modal');
 const backdrop = document.querySelector('.backdrop');
-const userInputs = adoptModal.querySelectorAll('input');
-const textArea = adoptModal.querySelector('textarea');
-const cancelModalBtn = adoptModal.querySelector('.button--cancel');
-const closeModalBtn = adoptModal.querySelector('.button--close');
-const adoptForm = document.getElementById('adopt-form');
+const userInputs = modal.querySelectorAll('input');
+const textArea = modal.querySelector('textarea');
+const cancelModalBtn = modal.querySelector('.button--cancel');
+const closeModalBtn = modal.querySelector('.button--close');
+const form = document.querySelector('.form');
+const modalTitle = document.querySelector('.modal__title');
+const adoptMeBtns = document.querySelectorAll('.button--adopt');
+const fosterBtn = document.querySelector('.button--foster');
+const volunteerBtn = document.querySelector('.button--volunteer');
+const successMessage = document.querySelector('.success-message');
+const successMessageBtn = document.querySelector('.success-message__btn');
 
-console.log(adoptMeBtns);
 
-const toggleBackdrop = () => {
-    backdrop.classList.toggle('visible');
+const toggleBackdrop = (show) => {
+    backdrop.classList.toggle('visible', show);
+    document.body.classList.toggle('no-scroll', show);
 };
 
-const showModal = () => {
-    adoptModal.style.display = 'flex';
-    toggleBackdrop();
-    document.body.classList.add('no-scroll');
+const showModal = (title) => {
+    modalTitle.textContent = title;
+    modal.style.display = 'flex';
+    toggleBackdrop(true);
 }
+
+const showSuccessMessage = () => {
+    successMessage.style.display = 'flex';
+    toggleBackdrop(true);
+}
+
+const closeSuccessMessage = () => {
+    successMessage.style.display = 'none';
+    toggleBackdrop(false);
+}
+
+successMessageBtn.addEventListener('click', closeSuccessMessage);
+
 
 const backdropClickHandler = () => {
     closeModal();
-    clearInputs();
+    clearInputs(); 
+    closeSuccessMessage()
 };
 
 const closeModal = () => {
-    adoptModal.style.display = 'none';
-    toggleBackdrop();
+    modal.style.display = 'none';
+    toggleBackdrop(false);
     clearInputs();
-    document.body.classList.remove('no-scroll');
 };
 
 const clearInputs = () => {
@@ -161,8 +178,12 @@ const clearInputs = () => {
 };
 
 adoptMeBtns.forEach(button => {
-    button.addEventListener('click', showModal);
+    button.addEventListener('click', () => showModal('Adopt Form'));
 });
+
+fosterBtn.addEventListener('click', () => showModal('Foster Form'));
+
+volunteerBtn.addEventListener('click', () => showModal('Volunteer Form'));
 
 backdrop.addEventListener('click', backdropClickHandler);
 cancelModalBtn.addEventListener('click', closeModal);
@@ -177,7 +198,8 @@ userInputs.forEach(input => {
     });
 });
 
-adoptForm.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
     let valid = true;
     let messages = [];
 
@@ -215,7 +237,59 @@ adoptForm.addEventListener('submit', (event) => {
     if (!valid) {
         event.preventDefault(); 
         alert(messages.join('\n'));
+        return;
     }
+
+    const formData = {
+        name: name.value,
+        email: email.value,
+        age: age.value,
+        occupation: occupation.value,
+        message: message.value
+    };
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Some Errow');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success:', data);
+        closeModal();
+        setTimeout(() => {
+            showSuccessMessage();
+        }, 0)
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form.');
+    });
+    
 });
 
 
+/* Scroll Up */
+const scrollBtn = document.querySelector('.button--scroll');
+const banner = document.querySelector('.banner');
+
+window.addEventListener("scroll", () => {
+    window.scrollY > banner.clientHeight
+      ? scrollBtn.classList.add("show-btn")
+      : scrollBtn.classList.remove("show-btn");
+  });
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" 
+    });
+});
