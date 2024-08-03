@@ -87,14 +87,14 @@ section {
 
 h4 {
     font-size: 1.5rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .button {
     display: inline-block;
     text-decoration: none;
     padding: 1rem;
-    background-color:#575757;
+    background-color: #575757;
     color: #fedc5a;
     border-radius: 10px;
     text-align: center;
@@ -284,11 +284,11 @@ h4 {
 }
 
 .slider-container__btn--prev {
-    left: 10px;
+    left: 0;
 }
 
 .slider-container__btn--next {
-    right: 10px;
+    right: 0;
 }
 
 .slider-container__btn:focus {
@@ -408,10 +408,10 @@ textarea.form__input {
     color: #575757;
     padding: 0.5rem 1rem;
     line-height: 1rem;    
-    pointer-events: none;   /* any event won't work */
-  opacity: 0;  /* hiding button */
-  transition: opacity 500ms ease;  /* animation */
-  -webkit-tap-highlight-color: transparent;
+    pointer-events: none;   
+    opacity: 0; 
+    transition: opacity 500ms ease;  
+    -webkit-tap-highlight-color: transparent;
 }
 
 .show-btn {
@@ -439,6 +439,7 @@ textarea.form__input {
     overflow-y: auto;
     display: none;
 }
+
 .success-message > *:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -446,7 +447,6 @@ textarea.form__input {
 .success-message__title {
     font-weight: 700;
 }
-
 
 .success-message__btn {
     padding: 1rem 2rem;
@@ -546,14 +546,15 @@ textarea.form__input {
     font-size: 12px;
 }
 
-.social {
+.footer__links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
     padding-bottom: 1rem;
 }
-.social__link {
+
+.footer__link {
     border-radius: 50px;
     flex: 0 0 48px;
     height: 48px;
@@ -562,7 +563,8 @@ textarea.form__input {
     align-items: center;
     transition: background-color 0.3s ease 0s;
 }
-.social__link:hover {
+
+.footer__link:hover {
     background-color: #fedc5a;
 }
   
@@ -588,6 +590,11 @@ textarea.form__input {
         min-width: 33.33%;
     }
 
+    .carousel__img {
+        width: 180px;
+        height: 180px;
+    }
+
     .modal {
         width: 70%;
         top: 10%;
@@ -596,10 +603,6 @@ textarea.form__input {
 }
 
 @media (max-width: 940px) {
-    .nav__menu-item {
-
-    }
-
     .container {
         padding: 0 1rem;
     }
@@ -771,3 +774,4 @@ textarea.form__input {
         left: 10%;
     }
 }
+
